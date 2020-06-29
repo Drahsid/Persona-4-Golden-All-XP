@@ -5,7 +5,12 @@
 
 // TODO: AOB scan?
 #define PP_TO_PROTAG (0x00DF84EC)
+
+#if __cplusplus <= 199711L
 constexpr int NUM_CHARS = 7;
+#else
+const int NUM_CHARS = 7;
+#endif
 
 /*#define PROTAG_PTR  (0x04E10034)
 #define YOSUKE_PTR  (0x04E100C0)

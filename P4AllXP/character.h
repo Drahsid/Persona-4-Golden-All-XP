@@ -22,7 +22,7 @@ typedef struct {
     int16_t sp;
     uint8_t unk_0x04[0x50];
     int xp;
-    uint8_t unk_0x44[0x2C];
+    uint8_t unk_0x58[0x2C];
 } character_t;
 
 typedef struct {

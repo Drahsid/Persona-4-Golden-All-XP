@@ -86,7 +86,7 @@ DWORD WINAPI asyncThread(HMODULE hModule) {
 
             printf("protag gained %d xp\n", delta);
 
-            delta *= ceil(inactive_xp_scale);
+            delta = ceil(delta * inactive_xp_scale);
             
             printf("inactive xp gain is %d\n", delta);
 
@@ -104,7 +104,7 @@ DWORD WINAPI asyncThread(HMODULE hModule) {
     return 1;
 }
 
-BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
     switch (ul_reason_for_call)
     {
